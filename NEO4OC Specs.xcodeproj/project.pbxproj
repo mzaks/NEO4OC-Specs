@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38E4C72A157D4467000A48A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C729157D4467000A48A2 /* UIKit.framework */; };
+		38E4C72C157D4467000A48A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C72B157D4467000A48A2 /* Foundation.framework */; };
+		38E4C72E157D4467000A48A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C72D157D4467000A48A2 /* CoreGraphics.framework */; };
+		38E4C734157D4467000A48A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E4C732157D4467000A48A2 /* InfoPlist.strings */; };
+		38E4C736157D4468000A48A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E4C735157D4468000A48A2 /* main.m */; };
+		38E4C73A157D4468000A48A2 /* MZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E4C739157D4468000A48A2 /* MZAppDelegate.m */; };
+		38E4C742157D4468000A48A2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C741157D4468000A48A2 /* SenTestingKit.framework */; };
+		38E4C743157D4468000A48A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C729157D4467000A48A2 /* UIKit.framework */; };
+		38E4C744157D4468000A48A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C72B157D4467000A48A2 /* Foundation.framework */; };
+		38E4C74C157D4468000A48A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E4C74A157D4468000A48A2 /* InfoPlist.strings */; };
+		38E4C74F157D4468000A48A2 /* NEO4OC_SpecsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E4C74E157D4468000A48A2 /* NEO4OC_SpecsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38E4C745157D4468000A48A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E4C71C157D4467000A48A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38E4C724157D4467000A48A2;
+			remoteInfo = "NEO4OC Specs";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38E4C725157D4467000A48A2 /* NEO4OC Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NEO4OC Specs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E4C729157D4467000A48A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		38E4C72B157D4467000A48A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		38E4C72D157D4467000A48A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		38E4C731157D4467000A48A2 /* NEO4OC Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NEO4OC Specs-Info.plist"; sourceTree = "<group>"; };
+		38E4C733157D4467000A48A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38E4C735157D4468000A48A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38E4C737157D4468000A48A2 /* NEO4OC Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NEO4OC Specs-Prefix.pch"; sourceTree = "<group>"; };
+		38E4C738157D4468000A48A2 /* MZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAppDelegate.h; sourceTree = "<group>"; };
+		38E4C739157D4468000A48A2 /* MZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAppDelegate.m; sourceTree = "<group>"; };
+		38E4C740157D4468000A48A2 /* NEO4OC SpecsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NEO4OC SpecsTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E4C741157D4468000A48A2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		38E4C749157D4468000A48A2 /* NEO4OC SpecsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NEO4OC SpecsTests-Info.plist"; sourceTree = "<group>"; };
+		38E4C74B157D4468000A48A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38E4C74D157D4468000A48A2 /* NEO4OC_SpecsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEO4OC_SpecsTests.h; sourceTree = "<group>"; };
+		38E4C74E157D4468000A48A2 /* NEO4OC_SpecsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEO4OC_SpecsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38E4C722157D4467000A48A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E4C72A157D4467000A48A2 /* UIKit.framework in Frameworks */,
+				38E4C72C157D4467000A48A2 /* Foundation.framework in Frameworks */,
+				38E4C72E157D4467000A48A2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E4C73C157D4468000A48A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E4C742157D4468000A48A2 /* SenTestingKit.framework in Frameworks */,
+				38E4C743157D4468000A48A2 /* UIKit.framework in Frameworks */,
+				38E4C744157D4468000A48A2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38E4C71A157D4467000A48A2 = {
+			isa = PBXGroup;
+			children = (
+				38E4C72F157D4467000A48A2 /* NEO4OC Specs */,
+				38E4C747157D4468000A48A2 /* NEO4OC SpecsTests */,
+				38E4C728157D4467000A48A2 /* Frameworks */,
+				38E4C726157D4467000A48A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38E4C726157D4467000A48A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38E4C725157D4467000A48A2 /* NEO4OC Specs.app */,
+				38E4C740157D4468000A48A2 /* NEO4OC SpecsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38E4C728157D4467000A48A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38E4C729157D4467000A48A2 /* UIKit.framework */,
+				38E4C72B157D4467000A48A2 /* Foundation.framework */,
+				38E4C72D157D4467000A48A2 /* CoreGraphics.framework */,
+				38E4C741157D4468000A48A2 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38E4C72F157D4467000A48A2 /* NEO4OC Specs */ = {
+			isa = PBXGroup;
+			children = (
+				38E4C738157D4468000A48A2 /* MZAppDelegate.h */,
+				38E4C739157D4468000A48A2 /* MZAppDelegate.m */,
+				38E4C730157D4467000A48A2 /* Supporting Files */,
+			);
+			path = "NEO4OC Specs";
+			sourceTree = "<group>";
+		};
+		38E4C730157D4467000A48A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38E4C731157D4467000A48A2 /* NEO4OC Specs-Info.plist */,
+				38E4C732157D4467000A48A2 /* InfoPlist.strings */,
+				38E4C735157D4468000A48A2 /* main.m */,
+				38E4C737157D4468000A48A2 /* NEO4OC Specs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38E4C747157D4468000A48A2 /* NEO4OC SpecsTests */ = {
+			isa = PBXGroup;
+			children = (
+				38E4C74D157D4468000A48A2 /* NEO4OC_SpecsTests.h */,
+				38E4C74E157D4468000A48A2 /* NEO4OC_SpecsTests.m */,
+				38E4C748157D4468000A48A2 /* Supporting Files */,
+			);
+			path = "NEO4OC SpecsTests";
+			sourceTree = "<group>";
+		};
+		38E4C748157D4468000A48A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38E4C749157D4468000A48A2 /* NEO4OC SpecsTests-Info.plist */,
+				38E4C74A157D4468000A48A2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38E4C724157D4467000A48A2 /* NEO4OC Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E4C752157D4468000A48A2 /* Build configuration list for PBXNativeTarget "NEO4OC Specs" */;
+			buildPhases = (
+				38E4C721157D4467000A48A2 /* Sources */,
+				38E4C722157D4467000A48A2 /* Frameworks */,
+				38E4C723157D4467000A48A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NEO4OC Specs";
+			productName = "NEO4OC Specs";
+			productReference = 38E4C725157D4467000A48A2 /* NEO4OC Specs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38E4C73F157D4468000A48A2 /* NEO4OC SpecsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E4C755157D4468000A48A2 /* Build configuration list for PBXNativeTarget "NEO4OC SpecsTests" */;
+			buildPhases = (
+				38E4C73B157D4468000A48A2 /* Sources */,
+				38E4C73C157D4468000A48A2 /* Frameworks */,
+				38E4C73D157D4468000A48A2 /* Resources */,
+				38E4C73E157D4468000A48A2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38E4C746157D4468000A48A2 /* PBXTargetDependency */,
+			);
+			name = "NEO4OC SpecsTests";
+			productName = "NEO4OC SpecsTests";
+			productReference = 38E4C740157D4468000A48A2 /* NEO4OC SpecsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38E4C71C157D4467000A48A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MZ;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Besitzer;
+			};
+			buildConfigurationList = 38E4C71F157D4467000A48A2 /* Build configuration list for PBXProject "NEO4OC Specs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 38E4C71A157D4467000A48A2;
+			productRefGroup = 38E4C726157D4467000A48A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38E4C724157D4467000A48A2 /* NEO4OC Specs */,
+				38E4C73F157D4468000A48A2 /* NEO4OC SpecsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38E4C723157D4467000A48A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E4C734157D4467000A48A2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E4C73D157D4468000A48A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E4C74C157D4468000A48A2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38E4C73E157D4468000A48A2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38E4C721157D4467000A48A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E4C736157D4468000A48A2 /* main.m in Sources */,
+				38E4C73A157D4468000A48A2 /* MZAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E4C73B157D4468000A48A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E4C74F157D4468000A48A2 /* NEO4OC_SpecsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38E4C746157D4468000A48A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38E4C724157D4467000A48A2 /* NEO4OC Specs */;
+			targetProxy = 38E4C745157D4468000A48A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38E4C732157D4467000A48A2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E4C733157D4467000A48A2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		38E4C74A157D4468000A48A2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E4C74B157D4468000A48A2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38E4C750157D4468000A48A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		38E4C751157D4468000A48A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38E4C753157D4468000A48A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NEO4OC Specs/NEO4OC Specs-Prefix.pch";
+				INFOPLIST_FILE = "NEO4OC Specs/NEO4OC Specs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		38E4C754157D4468000A48A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NEO4OC Specs/NEO4OC Specs-Prefix.pch";
+				INFOPLIST_FILE = "NEO4OC Specs/NEO4OC Specs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		38E4C756157D4468000A48A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NEO4OC Specs.app/NEO4OC Specs";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NEO4OC Specs/NEO4OC Specs-Prefix.pch";
+				INFOPLIST_FILE = "NEO4OC SpecsTests/NEO4OC SpecsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		38E4C757157D4468000A48A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NEO4OC Specs.app/NEO4OC Specs";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NEO4OC Specs/NEO4OC Specs-Prefix.pch";
+				INFOPLIST_FILE = "NEO4OC SpecsTests/NEO4OC SpecsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38E4C71F157D4467000A48A2 /* Build configuration list for PBXProject "NEO4OC Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E4C750157D4468000A48A2 /* Debug */,
+				38E4C751157D4468000A48A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38E4C752157D4468000A48A2 /* Build configuration list for PBXNativeTarget "NEO4OC Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E4C753157D4468000A48A2 /* Debug */,
+				38E4C754157D4468000A48A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38E4C755157D4468000A48A2 /* Build configuration list for PBXNativeTarget "NEO4OC SpecsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E4C756157D4468000A48A2 /* Debug */,
+				38E4C757157D4468000A48A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38E4C71C157D4467000A48A2 /* Project object */;
+}
