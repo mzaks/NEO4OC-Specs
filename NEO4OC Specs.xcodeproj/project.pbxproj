@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383A50B81580D41500AA10D5 /* libNEO4OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A50B31580D34B00AA10D5 /* libNEO4OC.a */; };
 		38E4C72A157D4467000A48A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C729157D4467000A48A2 /* UIKit.framework */; };
 		38E4C72C157D4467000A48A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C72B157D4467000A48A2 /* Foundation.framework */; };
 		38E4C72E157D4467000A48A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C72D157D4467000A48A2 /* CoreGraphics.framework */; };
@@ -36,6 +37,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 38CD9E73152B53F80059FEB3;
 			remoteInfo = NEO4OCTests;
+		};
+		383A50B61580D3FA00AA10D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383A50AA1580D34A00AA10D5 /* NEO4OC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 38CD9E62152B53F80059FEB3;
+			remoteInfo = NEO4OC;
 		};
 		38E4C745157D4468000A48A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -109,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383A50B81580D41500AA10D5 /* libNEO4OC.a in Frameworks */,
 				38E4C76B157D4ACF000A48A2 /* libKiwi.a in Frameworks */,
 				38E4C742157D4468000A48A2 /* SenTestingKit.framework in Frameworks */,
 				38E4C743157D4468000A48A2 /* UIKit.framework in Frameworks */,
@@ -249,6 +258,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				383A50B71580D3FA00AA10D5 /* PBXTargetDependency */,
 				38E4C76A157D4AB1000A48A2 /* PBXTargetDependency */,
 				38E4C746157D4468000A48A2 /* PBXTargetDependency */,
 			);
@@ -390,6 +400,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		383A50B71580D3FA00AA10D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NEO4OC;
+			targetProxy = 383A50B61580D3FA00AA10D5 /* PBXContainerItemProxy */;
+		};
 		38E4C746157D4468000A48A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 38E4C724157D4467000A48A2 /* NEO4OC Specs */;
@@ -499,7 +514,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NEO4OC Specs/NEO4OC Specs-Prefix.pch";
-				HEADER_SEARCH_PATHS = "Vendor/Kiwi/**";
+				HEADER_SEARCH_PATHS = (
+					"Vendor/Kiwi/**",
+					"Vendor/NEO4OC/**",
+				);
 				INFOPLIST_FILE = "NEO4OC SpecsTests/NEO4OC SpecsTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -522,7 +540,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NEO4OC Specs/NEO4OC Specs-Prefix.pch";
-				HEADER_SEARCH_PATHS = "Vendor/Kiwi/**";
+				HEADER_SEARCH_PATHS = (
+					"Vendor/Kiwi/**",
+					"Vendor/NEO4OC/**",
+				);
 				INFOPLIST_FILE = "NEO4OC SpecsTests/NEO4OC SpecsTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
