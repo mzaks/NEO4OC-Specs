@@ -17,7 +17,9 @@
 		38E4C743157D4468000A48A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C729157D4467000A48A2 /* UIKit.framework */; };
 		38E4C744157D4468000A48A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C72B157D4467000A48A2 /* Foundation.framework */; };
 		38E4C74C157D4468000A48A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E4C74A157D4468000A48A2 /* InfoPlist.strings */; };
-		38E4C74F157D4468000A48A2 /* NEO4OC_SpecsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E4C74E157D4468000A48A2 /* NEO4OC_SpecsTests.m */; };
+		38E4C76B157D4ACF000A48A2 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C764157D4A7B000A48A2 /* libKiwi.a */; };
+		38E4C76D157D4B78000A48A2 /* NEO4OCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E4C76C157D4B78000A48A2 /* NEO4OCSpec.m */; };
+		38E4C76D157D4B78000A48A4 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 38E4C724157D4467000A48A2;
 			remoteInfo = "NEO4OC Specs";
+		};
+		38E4C763157D4A7B000A48A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015B9F11583A77002E9A98;
+			remoteInfo = Kiwi;
+		};
+		38E4C765157D4A7B000A48A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015C9E11584017002E9A98;
+			remoteInfo = KiwiTests;
+		};
+		38E4C767157D4A7B000A48A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3B16542139967B800E9CC6E;
+			remoteInfo = KiwiExamples;
+		};
+		38E4C769157D4AB1000A48A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F5015B9E11583A77002E9A98;
+			remoteInfo = Kiwi;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,8 +75,8 @@
 		38E4C741157D4468000A48A2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		38E4C749157D4468000A48A2 /* NEO4OC SpecsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NEO4OC SpecsTests-Info.plist"; sourceTree = "<group>"; };
 		38E4C74B157D4468000A48A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		38E4C74D157D4468000A48A2 /* NEO4OC_SpecsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEO4OC_SpecsTests.h; sourceTree = "<group>"; };
-		38E4C74E157D4468000A48A2 /* NEO4OC_SpecsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEO4OC_SpecsTests.m; sourceTree = "<group>"; };
+		38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = Vendor/Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
+		38E4C76C157D4B78000A48A2 /* NEO4OCSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEO4OCSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E4C76B157D4ACF000A48A2 /* libKiwi.a in Frameworks */,
 				38E4C742157D4468000A48A2 /* SenTestingKit.framework in Frameworks */,
 				38E4C743157D4468000A48A2 /* UIKit.framework in Frameworks */,
 				38E4C744157D4468000A48A2 /* Foundation.framework in Frameworks */,
@@ -76,6 +107,7 @@
 		38E4C71A157D4467000A48A2 = {
 			isa = PBXGroup;
 			children = (
+				38E4C758157D4A63000A48A2 /* Vendor */,
 				38E4C72F157D4467000A48A2 /* NEO4OC Specs */,
 				38E4C747157D4468000A48A2 /* NEO4OC SpecsTests */,
 				38E4C728157D4467000A48A2 /* Frameworks */,
@@ -127,8 +159,7 @@
 		38E4C747157D4468000A48A2 /* NEO4OC SpecsTests */ = {
 			isa = PBXGroup;
 			children = (
-				38E4C74D157D4468000A48A2 /* NEO4OC_SpecsTests.h */,
-				38E4C74E157D4468000A48A2 /* NEO4OC_SpecsTests.m */,
+				38E4C76C157D4B78000A48A2 /* NEO4OCSpec.m */,
 				38E4C748157D4468000A48A2 /* Supporting Files */,
 			);
 			path = "NEO4OC SpecsTests";
@@ -141,6 +172,24 @@
 				38E4C74A157D4468000A48A2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38E4C758157D4A63000A48A2 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		38E4C75A157D4A7A000A48A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38E4C764157D4A7B000A48A2 /* libKiwi.a */,
+				38E4C766157D4A7B000A48A2 /* KiwiTests.octest */,
+				38E4C768157D4A7B000A48A2 /* KiwiExamples.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +224,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				38E4C76A157D4AB1000A48A2 /* PBXTargetDependency */,
 				38E4C746157D4468000A48A2 /* PBXTargetDependency */,
 			);
 			name = "NEO4OC SpecsTests";
@@ -202,6 +252,12 @@
 			mainGroup = 38E4C71A157D4467000A48A2;
 			productRefGroup = 38E4C726157D4467000A48A2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 38E4C75A157D4A7A000A48A2 /* Products */;
+					ProjectRef = 38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				38E4C724157D4467000A48A2 /* NEO4OC Specs */,
@@ -209,6 +265,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		38E4C764157D4A7B000A48A2 /* libKiwi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKiwi.a;
+			remoteRef = 38E4C763157D4A7B000A48A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		38E4C766157D4A7B000A48A2 /* KiwiTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiTests.octest;
+			remoteRef = 38E4C765157D4A7B000A48A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		38E4C768157D4A7B000A48A2 /* KiwiExamples.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiExamples.octest;
+			remoteRef = 38E4C767157D4A7B000A48A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		38E4C723157D4467000A48A2 /* Resources */ = {
@@ -259,7 +339,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E4C74F157D4468000A48A2 /* NEO4OC_SpecsTests.m in Sources */,
+				38E4C76D157D4B78000A48A2 /* NEO4OCSpec.m in Sources */,
+				38E4C76D157D4B78000A48A4 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +351,11 @@
 			isa = PBXTargetDependency;
 			target = 38E4C724157D4467000A48A2 /* NEO4OC Specs */;
 			targetProxy = 38E4C745157D4468000A48A2 /* PBXContainerItemProxy */;
+		};
+		38E4C76A157D4AB1000A48A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kiwi;
+			targetProxy = 38E4C769157D4AB1000A48A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -370,7 +456,13 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NEO4OC Specs/NEO4OC Specs-Prefix.pch";
+				HEADER_SEARCH_PATHS = "Vendor/Kiwi/**";
 				INFOPLIST_FILE = "NEO4OC SpecsTests/NEO4OC SpecsTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"${BUILT_PRODUCTS_DIR}/libKiwi.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -387,7 +479,13 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NEO4OC Specs/NEO4OC Specs-Prefix.pch";
+				HEADER_SEARCH_PATHS = "Vendor/Kiwi/**";
 				INFOPLIST_FILE = "NEO4OC SpecsTests/NEO4OC SpecsTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"${BUILT_PRODUCTS_DIR}/libKiwi.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -413,6 +511,7 @@
 				38E4C754157D4468000A48A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38E4C755157D4468000A48A2 /* Build configuration list for PBXNativeTarget "NEO4OC SpecsTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +520,7 @@
 				38E4C757157D4468000A48A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

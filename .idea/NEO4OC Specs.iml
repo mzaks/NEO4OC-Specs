@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CIDR_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$USER_HOME$/Library/Caches/appCode10/DerivedData/NEO4OC Specs-3aabf2ff/Build/Products/Debug-iphonesimulator/NEO4OC Specs.app">
+      <sourceFolder url="file://$USER_HOME$/Library/Caches/appCode10/DerivedData/NEO4OC Specs-3aabf2ff/Build/Products/Debug-iphonesimulator/NEO4OC Specs.app" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+
