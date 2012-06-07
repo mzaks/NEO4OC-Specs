@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		383A50B81580D41500AA10D5 /* libNEO4OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A50B31580D34B00AA10D5 /* libNEO4OC.a */; };
+		383EC5CF1581202B00E316DC /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 383EC5CE1581202B00E316DC /* Readme.md */; };
 		38E4C72A157D4467000A48A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C729157D4467000A48A2 /* UIKit.framework */; };
 		38E4C72C157D4467000A48A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C72B157D4467000A48A2 /* Foundation.framework */; };
 		38E4C72E157D4467000A48A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C72D157D4467000A48A2 /* CoreGraphics.framework */; };
@@ -92,6 +93,7 @@
 /* Begin PBXFileReference section */
 		383A50AA1580D34A00AA10D5 /* NEO4OC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NEO4OC.xcodeproj; path = Vendor/NEO4OC/NEO4OC.xcodeproj; sourceTree = "<group>"; };
 		383EC5CA15811F9300E316DC /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+		383EC5CE1581202B00E316DC /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		38E4C725157D4467000A48A2 /* NEO4OC Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NEO4OC Specs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E4C729157D4467000A48A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		38E4C72B157D4467000A48A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,6 +150,7 @@
 		38E4C71A157D4467000A48A2 = {
 			isa = PBXGroup;
 			children = (
+				383EC5CE1581202B00E316DC /* Readme.md */,
 				38E4C758157D4A63000A48A2 /* Vendor */,
 				38E4C72F157D4467000A48A2 /* NEO4OC Specs */,
 				38E4C747157D4468000A48A2 /* NEO4OC SpecsTests */,
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E4C734157D4467000A48A2 /* InfoPlist.strings in Resources */,
+				383EC5CF1581202B00E316DC /* Readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
