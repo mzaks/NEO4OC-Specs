@@ -45,6 +45,13 @@
 			remoteGlobalIDString = 38CD9E62152B53F80059FEB3;
 			remoteInfo = NEO4OC;
 		};
+		383EC5CC15811F9300E316DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 832C83C7157263B300F160D5;
+			remoteInfo = "Kiwi-OSX";
+		};
 		38E4C745157D4468000A48A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38E4C71C157D4467000A48A2 /* Project object */;
@@ -84,6 +91,7 @@
 
 /* Begin PBXFileReference section */
 		383A50AA1580D34A00AA10D5 /* NEO4OC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NEO4OC.xcodeproj; path = Vendor/NEO4OC/NEO4OC.xcodeproj; sourceTree = "<group>"; };
+		383EC5CA15811F9300E316DC /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		38E4C725157D4467000A48A2 /* NEO4OC Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NEO4OC Specs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E4C729157D4467000A48A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		38E4C72B157D4467000A48A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +202,7 @@
 			children = (
 				38E4C76C157D4B78000A48A2 /* NEO4OCSpec.m */,
 				38E4C748157D4468000A48A2 /* Supporting Files */,
+				383EC5CA15811F9300E316DC /* Readme.md */,
 			);
 			path = "NEO4OC SpecsTests";
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				38E4C764157D4A7B000A48A2 /* libKiwi.a */,
+				383EC5CD15811F9300E316DC /* libKiwi-OSX.a */,
 				38E4C766157D4A7B000A48A2 /* KiwiTests.octest */,
 				38E4C768157D4A7B000A48A2 /* KiwiExamples.octest */,
 			);
@@ -318,6 +328,13 @@
 			fileType = wrapper.cfbundle;
 			path = NEO4OCTests.octest;
 			remoteRef = 383A50B41580D34B00AA10D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		383EC5CD15811F9300E316DC /* libKiwi-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libKiwi-OSX.a";
+			remoteRef = 383EC5CC15811F9300E316DC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		38E4C764157D4A7B000A48A2 /* libKiwi.a */ = {
