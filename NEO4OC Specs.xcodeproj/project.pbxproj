@@ -23,6 +23,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		383A50B21580D34B00AA10D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383A50AA1580D34A00AA10D5 /* NEO4OC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 38CD9E63152B53F80059FEB3;
+			remoteInfo = NEO4OC;
+		};
+		383A50B41580D34B00AA10D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383A50AA1580D34A00AA10D5 /* NEO4OC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 38CD9E73152B53F80059FEB3;
+			remoteInfo = NEO4OCTests;
+		};
 		38E4C745157D4468000A48A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38E4C71C157D4467000A48A2 /* Project object */;
@@ -61,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		383A50AA1580D34A00AA10D5 /* NEO4OC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NEO4OC.xcodeproj; path = Vendor/NEO4OC/NEO4OC.xcodeproj; sourceTree = "<group>"; };
 		38E4C725157D4467000A48A2 /* NEO4OC Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NEO4OC Specs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E4C729157D4467000A48A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		38E4C72B157D4467000A48A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		383A50AB1580D34A00AA10D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				383A50B31580D34B00AA10D5 /* libNEO4OC.a */,
+				383A50B51580D34B00AA10D5 /* NEO4OCTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		38E4C71A157D4467000A48A2 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +201,7 @@
 		38E4C758157D4A63000A48A2 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				383A50AA1580D34A00AA10D5 /* NEO4OC.xcodeproj */,
 				38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */,
 			);
 			name = Vendor;
@@ -257,6 +282,10 @@
 					ProductGroup = 38E4C75A157D4A7A000A48A2 /* Products */;
 					ProjectRef = 38E4C759157D4A7A000A48A2 /* Kiwi.xcodeproj */;
 				},
+				{
+					ProductGroup = 383A50AB1580D34A00AA10D5 /* Products */;
+					ProjectRef = 383A50AA1580D34A00AA10D5 /* NEO4OC.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -267,6 +296,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		383A50B31580D34B00AA10D5 /* libNEO4OC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNEO4OC.a;
+			remoteRef = 383A50B21580D34B00AA10D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		383A50B51580D34B00AA10D5 /* NEO4OCTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NEO4OCTests.octest;
+			remoteRef = 383A50B41580D34B00AA10D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		38E4C764157D4A7B000A48A2 /* libKiwi.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
