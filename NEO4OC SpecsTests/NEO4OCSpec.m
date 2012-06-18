@@ -29,6 +29,7 @@ describe(@"Neo4j is a graph database which can be reached through REST API", ^{
             [graph getInfo:^(NSDictionary *info, NEOError *error) {
                 [error shouldBeNil];
                 _info = info;
+                NSLog(@"DB: %@", _info);
             }];
             [[expectFutureValue(_info) shouldEventually] beNonNil];
         });
@@ -143,7 +144,7 @@ describe(@"Neo4j is a graph database which can be reached through REST API", ^{
                 
                 it(@"create a relationship with data", ^{
                     NSDictionary *speaksAtData = [NSDictionary dictionaryWithObject:@"14.06.2012" forKey:@"date"];
-                    rel = [maxim createRelationshipToNode:mCologne ofType:@"SPEAKS_AT" andData:speaksAtData];
+                    rel = [maxim createRelationshipOfType:@"SPEAKS_AT" toNode:mCologne andData:speaksAtData];
                     [rel.relationshipId shouldNotBeNil];
                 });
                 
@@ -162,9 +163,9 @@ describe(@"Neo4j is a graph database which can be reached through REST API", ^{
                 });
                 
                 it(@"query for all relationships of a node", ^{
-                    NEORelationshipPromise *relPromise1 = [maxim createRelationshipToNode:lars ofType:@"KNOWS" andData:nil];
+                    NEORelationshipPromise *relPromise1 = [maxim createRelationshipOfType:@"KNOWS" toNode:lars andData:nil];
                     [relPromise1 wait];
-                    NEORelationshipPromise *relPromise2 = [lars createRelationshipToNode:maxim ofType:@"INVITED" andData:nil];
+                    NEORelationshipPromise *relPromise2 = [lars createRelationshipOfType:@"INVITED" toNode:maxim andData:nil];
                     [relPromise2 wait];
                     // Doesn't work because of transaction problem 
                     // [NEOPromise waitForPromises:relPromise1, relPromise2, nil];
@@ -241,11 +242,108 @@ describe(@"Neo4j is a graph database which can be reached through REST API", ^{
                     END_WAIT;
                 });
             });
+             
+        });
+        
+        describe(@"Cypher is a graph query language", ^{
+            __block NSNumber *larsId;
+            __block NSNumber *dariaId;
+            beforeAll(^{                    
+                NEONodePromise *mobileCologne = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"mobile.cologne" forKey:@"name"]];
+                
+                NEONodePromise *maxim = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"Maxim Z." forKey:@"name"]];
+                NEONodePromise *lars = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"Lars P." forKey:@"name"]];
+                NEONodePromise *daria = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"Daria S." forKey:@"name"]];
+                [[maxim createRelationshipOfType:@"SPEAK_AT" toNode:mobileCologne andData:nil] wait];
+                [[lars createRelationshipOfType:@"ORGANIZE" toNode:mobileCologne andData:nil] wait];
+                [[lars createRelationshipOfType:@"KNOWS" toNode:maxim andData:nil] wait];
+                [[maxim createRelationshipOfType:@"FRIEND" toNode:daria andData:nil] wait];
+                larsId = [NSNumber numberWithInt:lars.nodeId.intValue];
+                dariaId = [NSNumber numberWithInt:daria.nodeId.intValue];
+            });
+            
+            it(@"should find node", ^{
+                NSString *query = 
+                @"start n = node(*)"
+                "where n.name != 'Maxim Z.'"
+                "return n as node";
+                
+                START_WAIT;
+                [graph queryCypher:query withParameters:nil andTypedResultHandler:^(NSArray *result, NEOError *error) {
+                    [error shouldBeNil];
+                    [[result should] haveCountOfAtLeast:1];
+                    NSDictionary *result1 = [result objectAtIndex:0];
+                    id<NEONode> node = [result1 objectForKey:@"node"];
+                    [[[node.data objectForKey:@"name"] should] equal:@"Maxim Z."];
+                    wait--;
+                }];
+                END_WAIT;
+            });
+            
+            it(@"should find node wich relates to another", ^{
+                NSString *query = 
+                @"start n = node(*) "
+                "match n-[:SPEAK_AT]->mc "
+                "return n as node, mc as mobileCologne";
+                
+                START_WAIT;
+                [graph queryCypher:query withParameters:nil andTypedResultHandler:^(NSArray *result, NEOError *error) {
+                    [error shouldBeNil];
+                    [[result should] haveCountOfAtLeast:1];
+                    NSDictionary *result1 = [result objectAtIndex:0];
+                    id<NEONode> node1 = [result1 objectForKey:@"node"];
+                    [[[node1.data objectForKey:@"name"] should] equal:@"Maxim Z."];
+                    
+                    id<NEONode> node2 = [result1 objectForKey:@"mobileCologne"];
+                    [[[node2.data objectForKey:@"name"] should] equal:@"mobile.cologne"];
+                    wait--;
+                }];
+                END_WAIT;
+            });
+            
+            it(@"should find path between two nodes", ^{
+                NSString *query = @"start l = node({larsId}), d = node({dariaId}) match path = l -[?*]- d return path";
+                NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:dariaId, @"dariaId", larsId, @"larsId", nil];
+                NSLog(@"%@", [params description]);
+                START_WAIT;
+                [graph queryCypher:query withParameters:params andTypedResultHandler:^(NSArray *result, NEOError *error) {
+                    [error shouldBeNil];
+                    [[result should] haveCountOf:2];
+                    NSLog(@"Paths from Lars to Daria %@", result);
+                    wait--;
+                }];
+                END_WAIT;
+            });
+            
+            it(@"should find shortest path between two nodes", ^{
+                NSString *query = @"start l = node({larsId}), d = node({dariaId}) match path = shortestPath(l -[?*]- d) return path";
+                NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:dariaId, @"dariaId", larsId, @"larsId", nil];
+                START_WAIT;
+                [graph queryCypher:query withParameters:params andTypedResultHandler:^(NSArray *result, NEOError *error) {
+                    [error shouldBeNil];
+                    [[result should] haveCountOf:1];
+                    NSLog(@"Shortest paths from Lars to Daria %@", result);
+                    wait--;
+                }];
+                END_WAIT;
+            });
+        });
+        /*
+        // TODO:
+        
+        describe(@"Index helps to organize and find nodes/relationships", ^{
             
         });
         
+        describe(@"Traversals implement different algorithms for graph visiting", ^{
+            
+        });
+        
+        describe(@"Batch executes a list of operations in single request", ^{
+            
+        });
+         */
     });
-    
     
 });
 
