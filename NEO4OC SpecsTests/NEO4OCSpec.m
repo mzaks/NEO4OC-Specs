@@ -248,12 +248,17 @@ describe(@"Neo4j is a graph database which can be reached through REST API", ^{
         describe(@"Cypher is a graph query language", ^{
             __block NSNumber *larsId;
             __block NSNumber *dariaId;
-            beforeAll(^{                    
-                NEONodePromise *mobileCologne = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"mobile.cologne" forKey:@"name"]];
+            __block NEONodePromise *mobileCologne;
+            __block NEONodePromise *maxim;
+            __block NEONodePromise *lars;
+            __block NEONodePromise *daria;
+            beforeAll(^{   
                 
-                NEONodePromise *maxim = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"Maxim Z." forKey:@"name"]];
-                NEONodePromise *lars = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"Lars P." forKey:@"name"]];
-                NEONodePromise *daria = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"Daria S." forKey:@"name"]];
+                mobileCologne = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"mobile.cologne" forKey:@"name"]];
+                
+                maxim = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"Maxim Z." forKey:@"name"]];
+                lars = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"Lars P." forKey:@"name"]];
+                daria = [graph createNodeWithData:[NSDictionary dictionaryWithObject:@"Daria S." forKey:@"name"]];
                 [[maxim createRelationshipOfType:@"SPEAK_AT" toNode:mobileCologne andData:nil] wait];
                 [[lars createRelationshipOfType:@"ORGANIZE" toNode:mobileCologne andData:nil] wait];
                 [[lars createRelationshipOfType:@"KNOWS" toNode:maxim andData:nil] wait];
@@ -323,6 +328,33 @@ describe(@"Neo4j is a graph database which can be reached through REST API", ^{
                     [error shouldBeNil];
                     [[result should] haveCountOf:1];
                     NSLog(@"Shortest paths from Lars to Daria %@", result);
+                    wait--;
+                }];
+                END_WAIT;
+            });
+            
+            it(@"shoudl clean up", ^{
+                START_WAIT;
+                [maxim orphanNodeAndDeleteWithResultHandler:^(NEOError *error) {
+                    [error shouldBeNil];
+                    wait--;
+                }];
+                END_WAIT;
+                wait++;
+                [lars orphanNodeAndDeleteWithResultHandler:^(NEOError *error) {
+                    [error shouldBeNil];
+                    wait--;
+                }];
+                END_WAIT;
+                wait++;
+                [daria orphanNodeAndDeleteWithResultHandler:^(NEOError *error) {
+                    [error shouldBeNil];
+                    wait--;
+                }];
+                END_WAIT;
+                wait++;
+                [mobileCologne orphanNodeAndDeleteWithResultHandler:^(NEOError *error) {
+                    [error shouldBeNil];
                     wait--;
                 }];
                 END_WAIT;
